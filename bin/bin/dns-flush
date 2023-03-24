@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# This is mac only
+sudo killall -HUP mDNSResponder
