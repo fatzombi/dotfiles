@@ -10,6 +10,9 @@ setopt share_history
 # the previous event.
 setopt hist_ignore_dups
 
+# Write to the history file immediately, not when the shell exist
+setopt inc_append_history 
+
 # If set, parameter expansion, command substitution and arithmetic expansion is
 # performed in prompts.
 setopt prompt_subst
@@ -24,3 +27,5 @@ setopt menu_complete
 # If a command is not in the hash table, and there exists an executable
 # directory by that name, perform the cd command to that directory.
 setopt auto_cd
+
+
