@@ -8,8 +8,8 @@ fpath=($ZSH/functions $fpath)
 autoload -U $ZSH/functions/*(:t)
 
 source $ZSH/options.zsh
-source $ZSH/completion.zsh
 source $ZSH/variables.zsh
+source $ZSH/completion.zsh
 source $ZSH/aliases.zsh
 source $ZSH/bindings.zsh
 source $ZSH/syntax-highlighting.zsh

@@ -1,4 +1,4 @@
-export PATH="/opt/homebrew/sbin/:$HOME/.zsh/bin:$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/sbin:/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=5000
 export SAVEHIST=5000

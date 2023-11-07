@@ -52,7 +52,7 @@
   - description: Install argcomplete
     command: |
       if [ "$*uname -s)" = "Darwin" ]; then
-        pip install argcomplete
+        pip3 install argcomplete
       fi
     stdout: true
     stdin: true
