@@ -16,3 +16,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [tmux/plugins/tpm/bin/install_plugins, Installing Tmux TPM plugins]
