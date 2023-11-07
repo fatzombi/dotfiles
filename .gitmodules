@@ -13,3 +13,6 @@
 [submodule "assets/PayloadsAllTheThings"]
 	path = assets/PayloadsAllTheThings
 	url = https://github.com/swisskyrepo/PayloadsAllTheThings
+[submodule "assets/hacktricks"]
+	path = assets/hacktricks
+	url = https://github.com/carlospolop/hacktricks
