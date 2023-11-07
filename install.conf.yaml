@@ -6,6 +6,7 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.config/nvim: nvim
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.zsh: zsh/
@@ -14,7 +15,8 @@
     ~/bin: bin
 
 - create:
-  -  ~/.ssh
+  - ~/.config
+  - ~/.ssh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
@@ -43,6 +45,14 @@
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
         bash -c "cd macos && /opt/homebrew/bin/brew bundle --no-upgrade --no-lock"
+      fi
+    stdout: true
+    stdin: true
+
+  - description: Install argcomplete
+    command: |
+      if [ "$*uname -s)" = "Darwin" ]; then
+        pip install argcomplete
       fi
     stdout: true
     stdin: true
