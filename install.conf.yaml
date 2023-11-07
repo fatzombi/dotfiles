@@ -23,7 +23,7 @@
     command: |
       if [ "$(uname -s)" = "Linux" ]; then
           sudo apt update
-          sudo apt install -y python3-argcomplete bc neovim
+          sudo apt install -y $(cat apt/packages.txt)
       fi
     stdout: true
     stdin: true

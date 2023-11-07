@@ -1,2 +1,3 @@
 tmux/plugins/**
 zsh/plugins/antidote
+zsh/zsh_plugins.zsh

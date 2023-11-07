@@ -1,0 +1,3 @@
+bc
+neovim
+python3-argcomplete
