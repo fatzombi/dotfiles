@@ -27,3 +27,21 @@
       fi
     stdout: true
     stdin: true
+
+  - description: install homebrew
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        if ! command -v /opt/homebrew/bin/brew &> /dev/null; then
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        fi
+      fi
+    stdout: true
+    stdin: true
+
+  - description: Install homebrew formulas
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        bash -c "cd macos && /opt/homebrew/bin/brew bundle --no-upgrade --no-lock"
+      fi
+    stdout: true
+    stdin: true
