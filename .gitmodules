@@ -7,3 +7,9 @@
 [submodule "zsh/plugins/antidote"]
 	path = zsh/plugins/antidote
 	url = https://github.com/mattmc3/antidote
+[submodule "assets/SecLists"]
+	path = assets/SecLists
+	url = https://github.com/danielmiessler/SecLists
+[submodule "assets/PayloadsAllTheThings"]
+	path = assets/PayloadsAllTheThings
+	url = https://github.com/swisskyrepo/PayloadsAllTheThings

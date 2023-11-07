@@ -10,6 +10,7 @@
     ~/.tmux: tmux/
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
+    ~/assets: assets
     ~/bin: bin
 
 - create:
