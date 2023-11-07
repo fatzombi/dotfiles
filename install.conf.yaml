@@ -5,9 +5,11 @@
 - clean: ['~']
 
 - link:
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
     ~/.zshrc: zshrc
     ~/bin: bin
-    ~/.gitconfig: gitconfig
 
 - create:
   -  ~/.ssh
