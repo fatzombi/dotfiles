@@ -8,6 +8,7 @@
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
+    ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/bin: bin
 
@@ -17,3 +18,12 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [tmux/plugins/tpm/bin/install_plugins, Installing Tmux TPM plugins]
+
+  - description: sudo apt install the packages we want
+    command: |
+      if [ "$(uname -s)" = "Linux" ]; then
+          sudo apt update
+          sudo apt install -y python3-argcomplete bc neovim
+      fi
+    stdout: true
+    stdin: true

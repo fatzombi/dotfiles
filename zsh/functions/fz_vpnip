@@ -1,0 +1,2 @@
+#!/bin/zsh
+ip addr show tun0 | grep -m 1 inet | awk '{print $2}' | cut -d / -f 1
