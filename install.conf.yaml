@@ -34,8 +34,14 @@
   - description: install homebrew
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
-        if ! command -v /opt/homebrew/bin/brew &> /dev/null; then
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        if [ "$(uname -m)" = "arm64" ]; then
+          if ! command -v /opt/homebrew/bin/brew &> /dev/null; then
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          fi
+        elif [ "$(uname -m)" = "x86_64" ]; then
+          if ! command -v /usr/local/bin/brew &> /dev/null; then
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
+          fi
         fi
       fi
     stdout: true
@@ -44,7 +50,11 @@
   - description: Install homebrew formulas
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
-        bash -c "cd macos && /opt/homebrew/bin/brew bundle --no-upgrade --no-lock"
+        if [ "$(uname -m)" = "arm64" ]; then
+          bash -c "cd macos && /opt/homebrew/bin/brew bundle --no-upgrade --no-lock"
+        elif [ "$(uname -m)" = "x86_64" ]; then
+          bash -c "cd macos && /usr/local/bin/brew bundle --no-upgrade --no-lock"
+        fi
       fi
     stdout: true
     stdin: true
