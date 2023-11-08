@@ -16,6 +16,3 @@
 [submodule "assets/hacktricks"]
 	path = assets/hacktricks
 	url = https://github.com/carlospolop/hacktricks
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/NvChad/NvChad
