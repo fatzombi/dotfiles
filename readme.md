@@ -1,5 +1,8 @@
 # dotfiles
 
+## Prerequisites
+Download FiraCode Nerd Font Mono from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
 ## Usage
 ```shell
 mkdir -p src
