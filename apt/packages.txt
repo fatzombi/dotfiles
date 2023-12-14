@@ -1,5 +1,10 @@
+# General
 bc
 neovim
 python3-argcomplete
 tmux
 zsh
+
+# Appsec
+testssl.sh
+golang
