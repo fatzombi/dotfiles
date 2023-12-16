@@ -4,6 +4,7 @@ neovim
 python3-argcomplete
 tmux
 zsh
+eg
 
 # Appsec
 testssl.sh
