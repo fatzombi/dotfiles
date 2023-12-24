@@ -1,3 +1,5 @@
+require('util.zettelkasten')
+
 local mapkey = require("util.keymapper").mapkey
 
 -- Buffer Navigation
@@ -41,9 +43,14 @@ local api = vim.api
 api.nvim_set_keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
 api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
 api.nvim_set_keymap("n", "<leader>sm", ":TZFocus<CR>", {})
-api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
-api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 
 -- Comments
 api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
+
+-- "Zettlekasten"
+api.nvim_set_keymap("n", "<leader>nn", [[:lua create_zettelkasten_file()<CR>]], { noremap = true, silent = true })
+api.nvim_set_keymap("n", "<leader>nd", [[:lua create_or_open_daily_note()<CR>]], { noremap = true, silent = true })
+
+-- Markdown
+api.nvim_set_keymap("n", "<leader>np", ":Glow<CR>", {})

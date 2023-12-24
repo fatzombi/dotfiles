@@ -12,3 +12,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ name = "efm", async = true })
 	end,
 })
+
+vim.api.nvim_exec([[
+    augroup MarkdownSettings
+        autocmd!
+        autocmd FileType markdown setlocal wrap breakindent linebreak colorcolumn=""
+    augroup END
+]], false)
+

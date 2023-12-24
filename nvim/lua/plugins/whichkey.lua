@@ -1,5 +1,3 @@
-return {
-	"folke/which-key.nvim",
-	lazy = false,
-	opts = {},
+return { 
+  "folke/which-key.nvim"
 }

@@ -23,10 +23,8 @@ local config = function()
 			"bash",
 			"lua",
 			"dockerfile",
-			"solidity",
 			"gitignore",
 			"python",
-			"vue",
 		},
 		auto_install = true,
 		highlight = {
