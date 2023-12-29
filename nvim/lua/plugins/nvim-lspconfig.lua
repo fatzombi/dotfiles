@@ -58,14 +58,14 @@ local config = function()
 		},
 	})
 
-	-- markdown
+	--	markdown
 	lspconfig.marksman.setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
 		filetypes = { "markdown", "md", "telekasten", "markdown.mdx" },
 	})
 
-	-- bash
+	--	bash
 	lspconfig.bashls.setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
@@ -117,6 +117,7 @@ local config = function()
 				json = { eslint_d, fixjson },
 				jsonc = { eslint_d, fixjson },
 				sh = { shellcheck, shfmt },
+        telekasen = { prettierd },
 				markdown = { prettierd },
 				docker = { hadolint, prettierd },
 				html = { prettierd },

@@ -13,10 +13,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+	[[
     augroup MarkdownSettings
         autocmd!
         autocmd FileType markdown setlocal wrap breakindent linebreak colorcolumn=""
+        autocmd FileType telekasten setlocal wrap breakindent linebreak colorcolumn=""
     augroup END
-]], false)
+]],
+	false
+)
 
