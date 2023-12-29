@@ -52,6 +52,9 @@ api.nvim_set_keymap("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", {})
 api.nvim_set_keymap("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>", {})
 api.nvim_set_keymap("n", "<leader>zg", "<cmd>Telekasten follow_link<CR>", {})
 
+-- LazyGit
+api.nvim_set_keymap("n", "<leader>gg", ":LazyGit<CR>", {})
+
 --api.nvim_set_keymap("n", "<leader>nn", [[:lua create_zettelkasten_file()<CR>]], { noremap = true, silent = true })
 --api.nvim_set_keymap("n", "<leader>nd", [[:lua create_or_open_daily_note()<CR>]], { noremap = true, silent = true })
 
