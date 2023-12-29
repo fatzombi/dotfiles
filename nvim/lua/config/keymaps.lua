@@ -1,4 +1,4 @@
-require('util.zettelkasten')
+require("util.zettelkasten")
 
 local mapkey = require("util.keymapper").mapkey
 
@@ -8,7 +8,7 @@ mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
 
--- Directory Navigatio}n
+-- Directory Navigation
 mapkey("<leader>m", "NvimTreeFocus", "n")
 mapkey("<leader>e", "NvimTreeToggle", "n")
 
@@ -47,8 +47,13 @@ api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
 
 -- "Zettlekasten"
-api.nvim_set_keymap("n", "<leader>nn", [[:lua create_zettelkasten_file()<CR>]], { noremap = true, silent = true })
-api.nvim_set_keymap("n", "<leader>nd", [[:lua create_or_open_daily_note()<CR>]], { noremap = true, silent = true })
+api.nvim_set_keymap("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>", {})
+api.nvim_set_keymap("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", {})
+api.nvim_set_keymap("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>", {})
+api.nvim_set_keymap("n", "<leader>zg", "<cmd>Telekasten follow_link<CR>", {})
+
+--api.nvim_set_keymap("n", "<leader>nn", [[:lua create_zettelkasten_file()<CR>]], { noremap = true, silent = true })
+--api.nvim_set_keymap("n", "<leader>nd", [[:lua create_or_open_daily_note()<CR>]], { noremap = true, silent = true })
 
 -- Markdown
 api.nvim_set_keymap("n", "<leader>np", ":Glow<CR>", {})

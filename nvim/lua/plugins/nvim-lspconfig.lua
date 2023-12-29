@@ -58,6 +58,13 @@ local config = function()
 		},
 	})
 
+	-- markdown
+	lspconfig.marksman.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "markdown", "md", "telekasten", "markdown.mdx" },
+	})
+
 	-- bash
 	lspconfig.bashls.setup({
 		capabilities = capabilities,

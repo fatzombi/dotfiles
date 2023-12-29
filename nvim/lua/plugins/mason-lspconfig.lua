@@ -11,7 +11,7 @@ local opts = {
 		"jsonls",
     "csharp_ls",
     "dockerls",
-    "markdown"
+    "marksman"
 	},
 
 	automatic_installation = true,

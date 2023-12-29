@@ -22,13 +22,9 @@ function create_or_open_daily_note()
     -- Check if the file exists using v:shell_error
     local file_exists = vim.fn.system(string.format("[ -e %s ]", vim.fn.shellescape(full_path))) == 0
 
-    if file_exists then
-        -- Open the existing file in the active panel
-        vim.cmd("edit " .. full_path)
-    else
-        -- Create the file and open it
-        vim.cmd("edit " .. full_path)
+    vim.cmd("edit " .. full_path)
 
+    if not file_exists then
         -- You can add some default content if you want
         vim.api.nvim_buf_set_lines(0, 0, -1, false, {"# Daily Note - " .. current_date, ""})
     end
