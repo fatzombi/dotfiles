@@ -51,6 +51,7 @@ api.nvim_set_keymap("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>", {})
 api.nvim_set_keymap("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", {})
 api.nvim_set_keymap("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>", {})
 api.nvim_set_keymap("n", "<leader>zg", "<cmd>Telekasten follow_link<CR>", {})
+api.nvim_set_keymap("n", "<leader>zt", "<cmd>Telekasten show_tags<CR>", {})
 
 -- LazyGit
 api.nvim_set_keymap("n", "<leader>gg", ":LazyGit<CR>", {})
