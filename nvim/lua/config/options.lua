@@ -44,4 +44,4 @@ opt.guicursor =
 opt.encoding = "UTF-8"
 
 opt.conceallevel = 2
-vim.lsp.set_log_level("debug")
+--vim.lsp.set_log_level("debug")

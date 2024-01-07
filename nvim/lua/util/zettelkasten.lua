@@ -31,5 +31,5 @@ function create_or_open_daily_note()
 end
 
 -- Map the function to a key combination (e.g., <Leader>nn)
-vim.api.nvim_set_keymap('n', '<Leader>nn', [[:lua create_or_open_daily_note()<CR>]], { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<Leader>nn', [[:lua create_or_open_daily_note()<CR>]], { noremap = true, silent = true })
 

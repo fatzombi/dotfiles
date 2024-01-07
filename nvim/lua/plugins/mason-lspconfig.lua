@@ -9,9 +9,10 @@ local opts = {
 		"lua_ls",
 		"emmet_ls",
 		"jsonls",
-    "csharp_ls",
-    "dockerls",
-    "marksman"
+		"csharp_ls",
+		"dockerls",
+		"marksman",
+    "omnisharp"
 	},
 
 	automatic_installation = true,
