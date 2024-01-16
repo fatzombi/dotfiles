@@ -3,10 +3,6 @@ export DOTFILES=$HOME/src/dotfiles
 export ZSH=$DOTFILES/zsh
 export PROJECTS=$HOME/src
 
-# Functions
-fpath=($ZSH/functions $fpath)
-autoload -U $ZSH/functions/*(:t)
-
 source $ZSH/options.zsh
 source $ZSH/variables.zsh
 source $ZSH/completion.zsh
@@ -15,6 +11,10 @@ source $ZSH/bindings.zsh
 source $ZSH/syntax-highlighting.zsh
 source $ZSH/suggestions.zsh
 source $ZSH/prompt.zsh
+
+# Functions
+fpath=($ZSH/functions $fpath)
+autoload -U $ZSH/functions/*(:t)
 
 source $ZSH/plugins/antidote/antidote.zsh
 if [ -f "$ZSH/zsh_plugins.zsh" ] && [ -s "$ZSH/zsh_plugins.zsh" ]; then
