@@ -7,6 +7,8 @@ alias vim='nvim'
 alias d='docker $*'
 alias d-c='docker-compose $*'
 
+alias chmox='chmod +x'
+
 # Pipe my public key to my clipboard. Stolen from https://github.com/holman
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
