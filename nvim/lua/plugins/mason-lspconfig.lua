@@ -12,7 +12,8 @@ local opts = {
 		"csharp_ls",
 		"dockerls",
 		"marksman",
-    "omnisharp"
+    "omnisharp",
+    "gopls"
 	},
 
 	automatic_installation = true,
