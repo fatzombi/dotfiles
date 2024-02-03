@@ -3,6 +3,7 @@
 ## Prerequisites
 - Download FiraCode Nerd Font Mono from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 - On Mac OS, Disable the Ctrl+Space shortcut (Keyboard -> Shortcuts -> Input Sources -> Select the previous input source)
+- On Mac OS, run `sudo xcode-select --install`
 
 ## Usage
 ```shell
