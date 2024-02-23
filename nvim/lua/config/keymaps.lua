@@ -61,3 +61,10 @@ api.nvim_set_keymap("n", "<leader>gg", ":LazyGit<CR>", {})
 
 -- Markdown
 api.nvim_set_keymap("n", "<leader>np", ":Glow<CR>", {})
+
+-- Spelling
+api.nvim_set_keymap("n", "<leader>zl", "<cmd>Telescope spell_suggest<cr>", { desc = "List corrections" })
+api.nvim_set_keymap("n", "<leader>zf", "1z=", { desc = "Use first correction" })
+api.nvim_set_keymap("n", "<leader>zj", "]s", { desc = "Next error" })
+api.nvim_set_keymap("n", "<leader>zk", "[s", { desc = "Previous error" })
+api.nvim_set_keymap("n", "<leader>za", "zg", { desc = "Add word" })
