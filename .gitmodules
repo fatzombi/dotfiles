@@ -16,3 +16,6 @@
 [submodule "assets/hacktricks"]
 	path = assets/hacktricks
 	url = https://github.com/carlospolop/hacktricks
+[submodule "assets/wordlists"]
+	path = assets/wordlists
+	url = https://github.com/assetnote/wordlists
