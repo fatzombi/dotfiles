@@ -66,3 +66,10 @@
       fi
     stdout: true
     stdin: true
+
+  - description: Install go packages
+    command: |
+      go install github.com/projectdiscovery/katana/cmd/katana@latest
+      go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+    stdout: true
+    stdin: true
