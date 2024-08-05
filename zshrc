@@ -24,3 +24,4 @@ else
   antidote bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.zsh
   source $ZSH/zsh_plugins.zsh
 fi
+if [ -f "/Users/fatzombi/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/fatzombi/.config/fabric/fabric-bootstrap.inc"; fi
