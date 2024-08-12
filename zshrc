@@ -24,4 +24,8 @@ else
   antidote bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.zsh
   source $ZSH/zsh_plugins.zsh
 fi
-if [ -f "/Users/fatzombi/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/fatzombi/.config/fabric/fabric-bootstrap.inc"; fi
+if [ -f "/Users/philthomas/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/philthomas/.config/fabric/fabric-bootstrap.inc"; fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
