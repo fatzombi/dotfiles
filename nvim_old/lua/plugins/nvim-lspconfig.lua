@@ -73,35 +73,35 @@ local config = function()
 	-- })
 
 	-- csharp
-	lspconfig.omnisharp.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { "csproj", "sln", "cs" },
-		root_dir = function(fname)
-			local primary = require("lspconfig").util.root_pattern("*.sln")(fname)
-			local fallback = require("lspconfig").util.root_pattern("*.csproj")(fname)
-			return primary or fallback
-		end,
-		-- handlers = {
-		-- require("omnisharp_extended"),
-		-- ["textDocument/definition"] = require("omnisharp_extended").handler,
-		-- },
-		cmd = { "dotnet", "/Users/fatzombi/bin/omnisharp-osx-arm64-net6/OmniSharp.dll" },
-		enable_editorconfig_support = true,
-		enable_ms_build_load_projects_on_demand = false,
-		enable_roslyn_analyzers = false,
-		organize_imports_on_format = true,
-		enable_import_completion = true,
-		sdk_include_prereleases = true,
-		analyze_open_documents_only = false,
-	})
+	-- lspconfig.omnisharp.setup({
+	-- 	capabilities = capabilities,
+	-- 	on_attach = on_attach,
+	-- 	filetypes = { "csproj", "sln", "cs" },
+	-- 	root_dir = function(fname)
+	-- 		local primary = require("lspconfig").util.root_pattern("*.sln")(fname)
+	-- 		local fallback = require("lspconfig").util.root_pattern("*.csproj")(fname)
+	-- 		return primary or fallback
+	-- 	end,
+	-- 	-- handlers = {
+	-- 	-- require("omnisharp_extended"),
+	-- 	-- ["textDocument/definition"] = require("omnisharp_extended").handler,
+	-- 	-- },
+	-- 	cmd = { "dotnet", "/Users/fatzombi/bin/omnisharp-osx-arm64-net6/OmniSharp.dll" },
+	-- 	enable_editorconfig_support = true,
+	-- 	enable_ms_build_load_projects_on_demand = false,
+	-- 	enable_roslyn_analyzers = false,
+	-- 	organize_imports_on_format = true,
+	-- 	enable_import_completion = true,
+	-- 	sdk_include_prereleases = true,
+	-- 	analyze_open_documents_only = false,
+	-- })
 
 	--	bash
-	lspconfig.bashls.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { "sh" },
-	})
+	-- lspconfig.bashls.setup({
+	-- 	capabilities = capabilities,
+	-- 	on_attach = on_attach,
+	-- 	filetypes = { "sh" },
+	-- })
 
 	-- docker
 	lspconfig.dockerls.setup({
