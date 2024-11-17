@@ -2,9 +2,9 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "dotbot-brew"]
-	path = dotbot-brew
+[submodule "plugins/dotbot-if"]
+	path = plugins/dotbot-if
+	url = https://github.com/wonderbeyond/dotbot-if.git
+[submodule "plugins/dotbot-brew"]
+	path = plugins/dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
-[submodule "dotbot-conditional"]
-	path = dotbot-conditional
-	url = https://gitlab.com/gnfzdz/dotbot-conditional.git
