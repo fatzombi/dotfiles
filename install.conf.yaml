@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.dotfiles: ''
+
+- create:
+    - ~/.config
+    - ~/.ssh
+    - ~/assets
+    - ~/bin
+    - ~/src
+
+# Configure VIM
+
