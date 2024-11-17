@@ -16,5 +16,9 @@
     - ~/bin
     - ~/src
 
-# Configure VIM
-
+# Install homebrew packages if on mac
+- conditional:
+    if: '[[ "$(uname)" == "Darwin" ]]'
+    then:
+      brew:
+        - git
