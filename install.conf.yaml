@@ -36,3 +36,5 @@
     met:
     - brewfile:
       - Brewfile
+    - shell:
+      - command: pip3 install argcomplete
