@@ -9,11 +9,11 @@ git
 glow
 golangci-lint
 hadolint
+jq
+jython
 luacheck
 luarocks
 marksman
-jython
-jq
 neovim
 prettierd
 shellcheck
