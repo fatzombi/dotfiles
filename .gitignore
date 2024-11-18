@@ -1,4 +1,5 @@
+Brewfile.lock.json
 nvim/lazy-lock.json
 nvim/lazyvim.json
+tmux/plugins
 zsh/zsh_plugins.zsh
-Brewfile.lock.json
