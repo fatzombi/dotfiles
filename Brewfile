@@ -1,22 +1,22 @@
-aspell
-black
-chafa
-efm-langserver
-eslint
-fzf
-gh
-git
-glow
-golangci-lint
-hadolint
-jq
-jython
-luacheck
-luarocks
-marksman
-neovim
-prettierd
-shellcheck
-tmux
-tree
-tree-sitter
+brew "aspell"
+brew "black"
+brew "chafa"
+brew "efm-langserver"
+brew "eslint"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "glow"
+brew "golangci-lint"
+brew "hadolint"
+brew "jq"
+brew "jython"
+brew "luacheck"
+brew "luarocks"
+brew "marksman"
+brew "neovim"
+brew "prettierd"
+brew "shellcheck"
+brew "tmux"
+brew "tree"
+brew "tree-sitter"

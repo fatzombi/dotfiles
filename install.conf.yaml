@@ -39,7 +39,7 @@
 - if: 
   - cond: '[[ "$(uname)" == "Darwin" ]]'
     met:
-    - brewfile:
-      - Brewfile
+    - shell:
+      - brew bundle install --file=Brewfile
     - shell:
       - command: pip3 install argcomplete
