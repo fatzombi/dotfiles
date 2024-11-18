@@ -11,3 +11,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "zsh/plugins/antidote"]
+	path = zsh/plugins/antidote
+	url = https://github.com/mattmc3/antidote.git
