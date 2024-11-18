@@ -24,3 +24,8 @@ else
   antidote bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.zsh
   source $ZSH/zsh_plugins.zsh
 fi
+
+if [[ $(uname) == "Linux" ]]; then
+  eval `ssh-agent -s`
+  ssh-add ~/.ssh/id_ed25519
+fi
