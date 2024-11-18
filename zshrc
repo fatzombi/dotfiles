@@ -1,7 +1,7 @@
 # Exports
-export DOTFILES=$HOME/src/dotfiles
+export DOTFILES=$HOME/src/github.com/fatzombi/dotfiles
 export ZSH=$DOTFILES/zsh
-export PROJECTS=$HOME/src
+export PROJECTS=$HOME/github.com/fatzombi/
 
 source $ZSH/options.zsh
 source $ZSH/variables.zsh

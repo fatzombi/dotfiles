@@ -1,4 +1,9 @@
-alias cat='bat'
+if [[ $(uname) == "Linux" ]]; then
+  alias cat='batcat'
+else
+  alias cat='bat'
+fi
+
 alias reload!='. ~/.zshrc'
 alias cls='clear'
 
