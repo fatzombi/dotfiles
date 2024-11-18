@@ -8,6 +8,11 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.dotfiles: ''
+    ~/.config/nvim: nvim
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux
+    ~/.zsh: zsh
+    ~/.zshrc: zshrc
 
 - create:
     - ~/.config
