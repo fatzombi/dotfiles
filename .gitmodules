@@ -5,9 +5,6 @@
 [submodule "plugins/dotbot-if"]
 	path = plugins/dotbot-if
 	url = https://github.com/wonderbeyond/dotbot-if.git
-[submodule "plugins/dotbot-brew"]
-	path = plugins/dotbot-brew
-	url = https://github.com/d12frosted/dotbot-brew.git
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
