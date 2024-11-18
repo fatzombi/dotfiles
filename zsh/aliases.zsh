@@ -22,3 +22,4 @@ alias fz_http="python -m http.server"
 alias fz_pinglisten='sudo tcpdump ip proto \\icmp'
 
 alias history="history 1"
+alias gs="git status"
