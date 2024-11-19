@@ -1,4 +1,6 @@
 brew "aspell"
+brew "autoconf"
+brew "automake"
 brew "black"
 brew "chafa"
 brew "efm-langserver"
