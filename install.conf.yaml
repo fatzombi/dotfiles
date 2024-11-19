@@ -13,6 +13,8 @@
     ~/.tmux: tmux
     ~/.zsh: zsh
     ~/.zshrc: zshrc
+    ~/bin/public: bin
+    ~/assets/public: assets
 
 - create:
     - ~/.config
