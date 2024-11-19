@@ -8,10 +8,6 @@
 - create:
     - ~/.config
     - ~/.ssh
-    - ~/assets
-    - ~/assets/public
-    - ~/bin
-    - ~/bin/public
     - ~/src
 
 - link:
