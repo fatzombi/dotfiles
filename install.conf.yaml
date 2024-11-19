@@ -5,6 +5,15 @@
 
 - clean: ['~', '~/.config']
 
+- create:
+    - ~/.config
+    - ~/.ssh
+    - ~/assets
+    - ~/assets/public
+    - ~/bin
+    - ~/bin/public
+    - ~/src
+
 - link:
     ~/.gitconfig: gitconfig
     ~/.dotfiles: ''
@@ -15,15 +24,6 @@
     ~/.zshrc: zshrc
     ~/bin/public: bin
     ~/assets/public: assets
-
-- create:
-    - ~/.config
-    - ~/.ssh
-    - ~/assets
-    - ~/assets/public
-    - ~/bin
-    - ~/bin/public
-    - ~/src
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
