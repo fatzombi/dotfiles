@@ -21,9 +21,9 @@
     - ~/bin
     - ~/src
 
-      #- shell:
-  #  - [git submodule update --init --recursive, Installing subomdules]
-#  - [tmux/plugins/tpm/bin/install_plugins, Installing tmux TPM plugins]
+- shell:
+  - [git submodule update --init --recursive, Installing subomdules]
+  - [tmux/plugins/tpm/bin/install_plugins, Installing tmux TPM plugins]
 
 # Install apt packages if on Linux
 - if:
