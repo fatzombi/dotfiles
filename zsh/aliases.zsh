@@ -16,7 +16,8 @@ alias d-c='docker-compose $*'
 alias chmox='chmod +x'
 
 # Pipe my public key to my clipboard. Stolen from https://github.com/holman
-alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias pubkey='[ "$(uname)" = "Darwin" ] && { cat ~/.ssh/id_ed25519.pub | pbcopy && echo "=> Public key copied to pasteboard."; } || { /bin/cat ~/.ssh/id_ed25519.pub && echo "=> Copy the key from above manually."; }'
+#alias pubkey="more ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 alias fz_http="python -m http.server"
 alias fz_pinglisten='sudo tcpdump ip proto \\icmp'
