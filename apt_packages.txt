@@ -4,6 +4,7 @@ fzf
 gh
 git
 jq
+most
 neovim
 python3-argcomplete
 tmux

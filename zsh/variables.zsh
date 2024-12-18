@@ -4,6 +4,7 @@ export HISTSIZE=5000
 export SAVEHIST=5000
 export EDITOR='vim'
 export VISUAL='vim'
+export PAGER='most'
 
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
