@@ -5,6 +5,7 @@ export SAVEHIST=5000
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='most'
+export GROFF_NO_SGR=1 # Needed for colorful man output on linux
 
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
