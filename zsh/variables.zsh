@@ -19,3 +19,7 @@ fi
 if command -v dotnet > /dev/null; then
   export PATH="$HOME/.dotnet/tools:$PATH"
 fi
+
+if [[ $(uname) == "Linux" ]]; then
+  export PATH="/snap/bin:$PATH"
+fi
