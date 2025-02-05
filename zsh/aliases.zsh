@@ -1,9 +1,3 @@
-if [[ $(uname) == "Linux" ]]; then
-  alias cat='batcat'
-else
-  alias cat='bat'
-fi
-
 alias reload!='. ~/.zshrc'
 alias cls='clear'
 
@@ -26,3 +20,11 @@ alias history="history 1"
 
 alias gs="git status"
 alias gl="git log -n 5 --graph --decorate --oneline"
+
+if [[ $(uname) == "Darwin" ]]; then
+  alias killdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+  alias killaudio='sudo killall -9 coreaudiod'
+  alias cat='bat'
+else
+  alias cat='batcat'
+fi
