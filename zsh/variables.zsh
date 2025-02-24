@@ -9,6 +9,7 @@ export GROFF_NO_SGR=1 # Needed for colorful man output on linux
 
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+  export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
 if command -v go > /dev/null; then
