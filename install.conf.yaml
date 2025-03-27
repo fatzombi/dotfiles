@@ -18,6 +18,8 @@
     ~/.tmux: tmux
     ~/.zsh: zsh
     ~/.zshrc: zshrc
+    ~/.config/btop: btop
+    ~/.config/fastfetch: fastfetch
     ~/bin/public: bin
     ~/assets/public: assets
 
