@@ -146,6 +146,8 @@ x = [
 [mode.resize.binding]
 keypadMinus = 'resize smart -70'
 keypadPlus = 'resize smart +70'
+minus = 'resize smart -70'
+equal = 'resize smart +70'
 h = ['resize width -64']
 j = ['resize height -64']
 k = ['resize height +64']
