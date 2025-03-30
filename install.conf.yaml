@@ -20,6 +20,11 @@
     ~/.zshrc: zshrc
     ~/.config/btop: btop
     ~/.config/fastfetch: fastfetch
+    ~/.config/aerospace: aerospace
+    ~/.config/borders: borders
+    ~/.config/sketchybar: sketchybar
+    ~/.config/ghostty: ghostty 
+    ~/.config/btop: btop 
     ~/bin/public: bin
     ~/assets/public: assets
 
