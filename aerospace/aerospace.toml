@@ -1,0 +1,307 @@
+# AEROSPACE CONFIG
+start-at-login = true
+
+after-startup-command = [
+  'exec-and-forget ~/bin/mac_startup.sh',
+  'exec-and-forget borders',
+  'exec-and-forget sketchybar',
+]
+exec-on-workspace-change = [
+	'/bin/bash',
+	'-c',
+	'/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
+on-focus-changed = [
+  'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_focus_change'
+]
+
+on-focused-monitor-changed = [
+  'move-mouse monitor-lazy-center'
+]
+
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+key-mapping.preset = 'qwerty'
+
+[gaps]
+outer.bottom =     10 
+outer.top =        46 
+outer.left =       20
+outer.right =      20
+inner.horizontal = 20
+inner.vertical =   20
+
+[exec]                   # Again, you don't need to copy all config sections to your config.
+inherit-env-vars = true  # If you don't touch "exec" section,
+
+[exec.env-vars]          # it will fallback to "default-config.toml"
+PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+
+[mode.main.binding]
+alt-r = [
+  'mode resize',
+  'exec-and-forget eval ~/.config/borders/resize_borders.sh'
+]
+
+alt-g = [
+  'mode join',
+  'exec-and-forget eval ~/.config/borders/join_borders.sh'
+]
+# All possible keys:
+# - Letters.        a, b, c, ..., z
+# - Numbers.        0, 1, 2, ..., 9
+# - Keypad numbers. keypad0, keypad1, keypad2, ..., keypad9
+# - F-keys.         f1, f2, ..., f20
+# - Special keys.   minus, equal, period, comma, slash, backslash, quote, semicolon, backtick,
+#                   leftSquareBracket, rightSquareBracket, space, enter, esc, backspace, tab
+# - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
+#                   keypadMinus, keypadMultiply, keypadPlus
+# - Arrows.         left, down, up, right
+
+# All possible modifiers: cmd, alt, ctrl, shift
+
+alt-f = 'fullscreen'
+
+ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
+ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
+ctrl-k = 'focus --boundaries-action wrap-around-the-workspace up'
+ctrl-l = 'focus --boundaries-action wrap-around-the-workspace right'
+
+ctrl-shift-h = 'move left'
+ctrl-shift-j = 'move down'
+ctrl-shift-k = 'move up'
+ctrl-shift-l = 'move right'
+
+alt-comma = 'workspace prev'
+alt-period = 'workspace next'
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+alt-0 = 'workspace 0'
+
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 0'
+
+# Override hiding windows.
+cmd-h = []
+cmd-alt-h = []
+
+alt-s = [
+  'mode service',
+  'exec-and-forget eval ~/.config/borders/service_borders.sh'
+]
+
+[mode.service.binding]
+esc = [
+  'mode main', 
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+a = [
+  'reload-config', 
+  'mode main',
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+#s = [
+#  'exec-and-forget skhd --restart-service',
+#  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+#]
+b = [
+  'exec-and-forget sketchybar --reload',
+  'mode main',
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+m = [
+  'exec-and-forget eval ~/.config/borders/init_borders.sh', 
+  'mode main',
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+x = [
+  'exec-and-forget eval ~/bin/start_everything.sh', 
+  'mode main',
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+
+[mode.resize.binding]
+keypadMinus = 'resize smart -70'
+keypadPlus = 'resize smart +70'
+h = ['resize width -64']
+j = ['resize height -64']
+k = ['resize height +64']
+l = ['resize width +64']
+esc = [
+  'mode main',
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+
+[mode.join.binding]
+h = [
+  'join-with left', 
+  'mode main'
+]
+j = [
+  'join-with down', 
+  'mode main'
+]
+k = [
+  'mode main',
+  'join-with up' 
+]
+l = [
+  'join-with right', 
+  'mode main'
+]
+esc = [
+  'mode main',
+  'exec-and-forget eval ~/.config/borders/default_borders.sh'
+]
+
+[workspace-to-monitor-force-assignment]
+0 = 1 
+9 = 1
+1 = 'LG ULTRAGEAR'
+2 = 'LG ULTRAGEAR'
+3 = 'LG ULTRAGEAR'
+4 = 'LG ULTRAGEAR'
+5 = 'LG ULTRAGEAR'
+6 = 'LG ULTRAGEAR'
+7 = 'LG ULTRAGEAR'
+8 = 'LG ULTRAGEAR'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ['layout tiling', 'move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'net.shinyfrog.bear'
+run = ['layout tiling', 'move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ScreenSharing'
+run = ['layout tiling', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'org.tabby'
+run = ['layout tiling', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run = ['layout tiling']
+
+[[on-window-detected]]
+if.app-id = 'com.getharvest.harvestxapp'
+run = ['layout tiling', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['layout tiling', 'move-node-to-workspace 9']
+
+[[on-window-detected]]
+if.app-id = 'com.todoist.mac.Todoist'
+run = ['layout tiling', 'move-node-to-workspace 9']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = ['layout tiling', 'move-node-to-workspace 9']
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
+run = ['layout tiling', 'move-node-to-workspace 8']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'              
+run = ['move-node-to-workspace 4']  
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'              
+run = ['move-node-to-workspace 4']  
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['layout tiling', 'move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = 'ch.protonmail.desktop'
+run = ['layout tiling', 'move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = ['layout tiling', 'move-node-to-workspace 4']
+
+#[[on-window-detected]]
+#if.app-id = 'com.microsoft.rdc.macos'              
+#run = ['move-node-to-workspace 5_dev']  
+
+[[on-window-detected]]
+if.app-id = 'org.whispersystems.signal-desktop'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Dictionary'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.fatzombi.getbelch'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.AppStore'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iBooksX'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.AddressBook'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.findmy'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.DiskUtility'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Maps'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Photos'
+run = [ 'layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = [ 'layout floating']
+
