@@ -217,19 +217,19 @@ run = ['layout tiling', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = ['layout tiling', 'move-node-to-workspace 9']
+run = ['layout tiling', 'move-node-to-workspace 0']
 
 [[on-window-detected]]
 if.app-id = 'com.todoist.mac.Todoist'
-run = ['layout tiling', 'move-node-to-workspace 9']
+run = ['layout tiling', 'move-node-to-workspace 0']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
-run = ['layout tiling', 'move-node-to-workspace 9']
+run = ['layout tiling', 'move-node-to-workspace 0']
 
 [[on-window-detected]]
 if.app-id = 'com.1password.1password'
-run = ['layout tiling', 'move-node-to-workspace 8']
+run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'              

@@ -92,3 +92,4 @@ complete -C /opt/homebrew/bin/aws-sso aws-sso
 # END_AWS_SSO_CLI
 
 export PATH=$PATH:/Users/fatzombi/.spicetify
+alias claude="/Users/fatzombi/.claude/local/claude"
