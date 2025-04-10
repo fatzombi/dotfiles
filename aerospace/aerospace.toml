@@ -68,7 +68,7 @@ alt-g = [
 
 # All possible modifiers: cmd, alt, ctrl, shift
 
-alt-space = 'layout floating tiling'
+ctrl-alt-space = 'layout floating tiling'
 alt-f = 'fullscreen'
 
 ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
