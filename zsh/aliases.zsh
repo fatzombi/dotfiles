@@ -1,6 +1,8 @@
 alias reload!='. ~/.zshrc'
 alias cls='clear'
 
+alias delete_pycache='find . -name '__pycache__' -type d -exec rm -r {} +'
+
 alias vi='nvim'
 alias vim='nvim'
 
