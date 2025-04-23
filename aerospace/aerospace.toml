@@ -2,7 +2,7 @@
 start-at-login = true
 
 after-startup-command = [
-  'exec-and-forget ~/bin/mac_startup.sh',
+  #  'exec-and-forget ~/bin/mac_startup.sh',
   'exec-and-forget borders',
   'exec-and-forget sketchybar',
 ]
