@@ -1,0 +1,16 @@
+# ~/.tmuxinator/default_workspace.yml
+name: default
+root: ~
+
+windows:
+  - utilities:
+      # this pane will immediately run btop
+      panes:
+        - btop
+
+  - notes:
+      # override the root for this window
+      root: ~/Documents/Obsidian Vault/
+      panes:
+        - nvim .
+

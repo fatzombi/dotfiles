@@ -25,6 +25,7 @@
     ~/.config/sketchybar: sketchybar
     ~/.config/ghostty: ghostty 
     ~/.config/btop: btop 
+    ~/.config/tmuxinator: tmuxinator
     ~/bin/public: bin
     ~/assets/public: assets
 
