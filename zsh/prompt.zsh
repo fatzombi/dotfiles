@@ -49,8 +49,14 @@ need_push () {
 }
 
 directory_name() {
-  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+  # -P tells print to perform prompt-expansion *now*,
+  # so %1~ becomes your current dir (and it handles spaces correctly)
+  print -P "%{$fg_bold[cyan]%}%1~%{$reset_color%}"
 }
+
+#directory_name() {
+#  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+#}
 
 # From http://dotfiles.org/~_why/.zshrc
 # Sets the window title nicely no matter where you are
