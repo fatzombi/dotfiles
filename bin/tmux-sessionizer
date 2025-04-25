@@ -2,25 +2,31 @@
 # yonked from https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer
 
 if [[ $# -eq 1 ]]; then
-  selected=$1
+  selected="$1"
 else
-  selected=$(find ~/src ~/src/github.com/fatzombi/ ~/ -mindepth 1 -maxdepth 1 -type d | fzf)
+  # wrap the command-substitution in quotes, so $selected keeps its spaces
+  selected="$(find ~/src ~/src/github.com/fatzombi/ ~/ ~/Documents/ \
+    -mindepth 1 -maxdepth 1 -type d | fzf)"
 fi
 
-if [[ -z $selected ]]; then
+# always quote your variables in tests, too
+if [[ -z "$selected" ]]; then
   exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
+# replace spaces (and dots) with underscores so tmux session names are valid
+selected_name="$(basename "$selected" | tr ' .-' '___')"
+tmux_running="$(pgrep tmux)"
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-  tmux new-session -s $selected_name -c $selected
+if [[ -z "$TMUX" ]] && [[ -z "$tmux_running" ]]; then
+  # quote both the -s and -c args
+  tmux new-session -s "$selected_name" -c "$selected"
   exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2>/dev/null; then
-  tmux new-session -ds $selected_name -c $selected
+# quote the session target here, too
+if ! tmux has-session -t "$selected_name" 2>/dev/null; then
+  tmux new-session -ds "$selected_name" -c "$selected"
 fi
 
-tmux switch-client -t $selected_name
+tmux switch-client -t "$selected_name"
