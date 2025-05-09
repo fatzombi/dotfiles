@@ -1,7 +1,10 @@
 alias reload!='. ~/.zshrc'
 alias cls='clear'
 
-alias s='sesh connect $(sesh list | fzf)' 
+alias s='sesh connect $(sesh list | fzf)'
+
+alias oo='cd ~/Documents/Obsidian\ Vault/Inbox; vim'
+alias or='cd ~/Documents/Obsidian\ Vault/Inbox; vim *.md'
 
 alias delete_pycache='find . -name '__pycache__' -type d -exec rm -r {} +'
 

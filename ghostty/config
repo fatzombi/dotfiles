@@ -15,11 +15,11 @@
 # load more configuration files. Paths are relative to the file containing the
 # `config-file` directive. For command-line arguments, paths are relative to
 # the current working directory.
-# 
+#
 # Prepend a ? character to the file path to suppress errors if the file does
 # not exist. If you want to include a file that begins with a literal ?
 # character, surround the file path in double quotes (").
-# 
+#
 # Cycles are not allowed. If a cycle is detected, an error will be logged and
 # the configuration file will be ignored.
 theme= catppuccin-mocha
@@ -33,7 +33,7 @@ theme= catppuccin-mocha
 # custom-shader = shaders/bloom075.glsl
 # custom-shader = shaders/bloom060.glsl
 # custom-shader = shaders/bloom050.glsl
-custom-shader = shaders/bloom025.glsl
+# custom-shader = shaders/bloom025.glsl
 # custom-shader = shaders/bloom050.glsl
 # custom-shader = shaders/bloom060.glsl
 # custom-shader = shaders/bloom075.glsl
@@ -65,27 +65,27 @@ custom-shader = shaders/bloom025.glsl
 # The command to run, usually a shell. If this is not an absolute path, it'll
 # be looked up in the `PATH`. If this is not set, a default will be looked up
 # from your system. The rules for the default lookup are:
-# 
+#
 #   * `SHELL` environment variable
-# 
+#
 #   * `passwd` entry (user information)
-# 
+#
 # This can contain additional arguments to run the command with. If additional
 # arguments are provided, the command will be executed using `/bin/sh -c`.
 # Ghostty does not do any shell command parsing.
-# 
+#
 # If you're using the `ghostty` CLI there is also a shortcut to run a command
 # with arguments directly: you can use the `-e` flag. For example: `ghostty -e
 # fish --with --custom --args`. The `-e` flag automatically forces some
 # other behaviors as well:
-# 
+#
 #   * `gtk-single-instance=false` - This ensures that a new instance is
 #     launched and the CLI args are respected.
-# 
+#
 #   * `quit-after-last-window-closed=true` - This ensures that the Ghostty
 #     process will exit when the command exits. Additionally, the
 #     `quit-after-last-window-closed-delay` is unset.
-# ############################################################################ 
+# ############################################################################
 # The following command checks if tmux is installed.
 # If tmux is installed, it automatically attaches to an existing tmux session.
 # If no tmux session exists, a new one is created.
@@ -104,15 +104,15 @@ command = zsh --login -c "if command -v tmux >/dev/null 2>&1; then tmux attach |
 # Horizontal window padding. This applies padding between the terminal cells
 # and the left and right window borders. The value is in points, meaning that
 # it will be scaled appropriately for screen DPI.
-# 
+#
 # If this value is set too large, the screen will render nothing, because the
 # grid will be completely squished by the padding. It is up to you as the user
 # to pick a reasonable value. If you pick an unreasonable value, a warning
 # will appear in the logs.
-# 
+#
 # Changing this configuration at runtime will only affect new terminals, i.e.
 # new windows, tabs, etc.
-# 
+#
 # To set a different left and right padding, specify two numerical values
 # separated by a comma. For example, `window-padding-x = 2,4` will set the
 # left padding to 2 and the right padding to 4. If you want to set both
@@ -123,15 +123,15 @@ window-padding-x = 4,2
 # Vertical window padding. This applies padding between the terminal cells and
 # the top and bottom window borders. The value is in points, meaning that it
 # will be scaled appropriately for screen DPI.
-# 
+#
 # If this value is set too large, the screen will render nothing, because the
 # grid will be completely squished by the padding. It is up to you as the user
 # to pick a reasonable value. If you pick an unreasonable value, a warning
 # will appear in the logs.
-# 
+#
 # Changing this configuration at runtime will only affect new terminals,
 # i.e. new windows, tabs, etc.
-# 
+#
 # To set a different top and bottom padding, specify two numerical values
 # separated by a comma. For example, `window-padding-y = 2,4` will set the
 # top padding to 2 and the bottom padding to 4. If you want to set both
@@ -141,20 +141,20 @@ window-padding-y = 6,0
 
 font-family = "FiraCode Nerd Font Mono"
 #font-family = "JetBrainsMono Nerd Font"
-font-size = 16
+font-size = 19
 
 # Valid values:
-# 
+#
 #   * `true`
 #   * `false` - windows won't have native decorations, i.e. titlebar and
 #      borders. On macOS this also disables tabs and tab overview.
-# 
+#
 # The "toggle_window_decoration" keybind action can be used to create
 # a keybinding to toggle this setting at runtime.
-# 
+#
 # Changing this configuration in your configuration and reloading will
 # only affect new windows. Existing windows will not be affected.
-# 
+#
 # macOS: To hide the titlebar without removing the native window borders
 #        or rounded corners, use `macos-titlebar-style = hidden` instead.
 macos-titlebar-style = hidden
@@ -201,13 +201,13 @@ keybind = cmd+s=toggle_quick_terminal
 # sequences on macOS if you use them via the *Alt* key. You may set this to
 # `false` to restore the macOS *Alt* key unicode sequences but this will break
 # terminal sequences expecting *Alt* to work.
-# 
+#
 # The values `left` or `right` enable this for the left or right *Option*
 # key, respectively.
-# 
+#
 # Note that if an *Option*-sequence doesn't produce a printable character, it
 # will be treated as *Alt* regardless of this setting. (i.e. `alt+ctrl+a`).
-# 
+#
 # This does not work with GLFW builds.
 macos-option-as-alt = right
 
@@ -225,27 +225,27 @@ keybind = super+r=reload_config
 # keybind = super+k=clear_screen
 
 # Customize the macOS app icon.
-# 
+#
 # This only affects the icon that appears in the dock, application
 # switcher, etc. This does not affect the icon in Finder because
 # that is controlled by a hardcoded value in the signed application
 # bundle and can't be changed at runtime. For more details on what
 # exactly is affected, see the `NSApplication.icon` Apple documentation;
 # that is the API that is being used to set the icon.
-# 
+#
 # WARNING: The `custom-style` option is _experimental_. We may change
 # the format of the custom styles in the future. We're still finalizing
 # the exact layers and customization options that will be available.
-# 
+#
 # Other caveats:
-# 
+#
 #   * The icon in the update dialog will always be the official icon.
 #     This is because the update dialog is managed through a
 #     separate framework and cannot be customized without significant
 #     effort.
-# 
+#
 # Valid values:
-# 
+#
 #  * `official` - Use the official Ghostty icon.
 #  * `blueprint`, `chalkboard`, `microchip`, `glass`, `holographic`,
 #    `paper`, `retro`, `xray` - Official variants of the Ghostty icon
@@ -255,6 +255,6 @@ keybind = super+r=reload_config
 #    specified using the additional `macos-icon`-prefixed configurations.
 #    The `macos-icon-ghost-color` and `macos-icon-screen-color`
 #    configurations are required for this style.
-# 
+#
 macos-icon = blueprint
 

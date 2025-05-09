@@ -14,8 +14,7 @@
     ~/.gitconfig: gitconfig
     ~/.dotfiles: ''
     ~/.config/nvim: nvim
-    ~/.tmux.conf: tmux.conf
-    ~/.tmux: tmux
+    ~/.config/tmux: tmux
     ~/.zsh: zsh
     ~/.zshrc: zshrc
     ~/.config/btop: btop
@@ -25,13 +24,13 @@
     ~/.config/sketchybar: sketchybar
     ~/.config/ghostty: ghostty 
     ~/.config/btop: btop 
-    ~/.config/tmuxinator: tmuxinator
+    ~/.config/sesh: sesh
     ~/bin/public: bin
     ~/assets/public: assets
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [tmux/plugins/tpm/bin/install_plugins, Installing tmux TPM plugins]
+  - [~/.tmux/plugins/tpm/bin/install_plugins, Installing tmux TPM plugins]
 
 # Install apt packages if on Linux
 - if:

@@ -17,14 +17,16 @@ unbind %
 bind | split-window -h
 bind - split-window -v
 
-# Show messages longer (750ms to 4s)
-set -g display-time 4000
+set-option -g focus-events on
 
-# Refresh more often (15s to 2s)
-set -g status-interval 2
+# Show messages longer (750ms to 4s)
+set -g display-time 3000
+
+# Refresh more often (15s to 3 seconds)
+set -g status-interval 3
 
 # N00bs use mice
-#set -g mouse on
+set -g mouse on
 
 # Yes, we count from 0, but that button is so far away
 set -g base-index 1
@@ -72,13 +74,16 @@ bind -n C-Right resize-pane -R 5
 unbind -T copy-mode-vi MouseDragEnd1Pane # don't exit copy mode when dragging with mouse
 
 # Remove delay for leaving insert mode with ESC in neovim
-set -sg escape-time 10
+set -sg escape-time 0
+
+set -g detach-on-destroy off
+set -g history-limit 1000000
 
 # Copy mode
-#set -s set-clipboard external
+set -s set-clipboard on
 
 bind-key -r f run-shell "tmux neww ~/bin/tmux-sessionizer"
-bind-key -r C run-shell "~/bin/tmux-sessionizer ~/src/github.com/fatzombi/cloudfusion/"
+#bind-key -r C run-shell "~/bin/tmux-sessionizer ~/src/github.com/fatzombi/cloudfusion/"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'

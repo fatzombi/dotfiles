@@ -30,6 +30,9 @@ if [[ $(uname) == "Linux" ]]; then
   ssh-add ~/.ssh/id_ed25519
 fi
 
+# Required to start tmuz on startup
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Added by Windsurf
 export PATH="/Users/fatzombi/.codeium/windsurf/bin:$PATH"
 
@@ -50,7 +53,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # autoload -Uz +X compinit && compinit
 # autoload -Uz +X bashcompinit && bashcompinit
 #
-# If you do not already have these lines, you must COPY the lines 
+# If you do not already have these lines, you must COPY the lines
 # above, place it OUTSIDE of the BEGIN/END_AWS_SSO_CLI markers
 # and of course uncomment it
 
