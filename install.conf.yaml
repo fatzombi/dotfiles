@@ -22,8 +22,8 @@
     ~/.config/aerospace: aerospace
     ~/.config/borders: borders
     ~/.config/sketchybar: sketchybar
-    ~/.config/ghostty: ghostty 
-    ~/.config/btop: btop 
+    ~/.config/ghostty: ghostty
+    ~/.config/btop: btop
     ~/.config/sesh: sesh
     ~/bin/public: bin
     ~/assets/public: assets
@@ -36,17 +36,19 @@
 - if:
   - cond: '[[ "$(uname)" == "Linux" ]]'
     met:
-      - shell: 
+      - shell:
         - description: sudo apt install the packages we want
           command: |
             sudo apt update
             sudo apt install -y $(cat apt_packages.txt)
 
 # Install homebrew packages and pip's argcomplete if on macOS
-- if: 
+- if:
   - cond: '[[ "$(uname)" == "Darwin" ]]'
     met:
     - shell:
       - brew bundle install --file=Brewfile
     - shell:
-      - command: pip3 install argcomplete --break-system-packages
+      - command: pip3 install argcomplete #--break-system-packages
+    - shell:
+      - command: source osx.sh
