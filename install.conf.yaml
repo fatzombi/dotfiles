@@ -25,6 +25,7 @@
     ~/.config/ghostty: ghostty
     ~/.config/btop: btop
     ~/.config/sesh: sesh
+    ~/.config/githooks: githooks
     ~/bin/public: bin
     ~/assets/public: assets
 
