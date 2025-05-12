@@ -11,4 +11,5 @@
 	defaultBranch = main
 
 [core]
-    hooksPath = .config/githooks
+    hooksPath = ~/.config/githooks
+	editor = vim
